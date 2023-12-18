@@ -1,0 +1,158 @@
+.mainArea {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0rem;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 90%;
+        height: auto;
+
+        .sectionList {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .homePage {
+        height: auto;
+        width: 100%;
+        min-width: 24.375rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        header {
+            width: 87.7%;
+            max-width: 21.375rem;
+            margin: 1.44rem 0rem 2.38rem 0rem;
+
+            .logo {
+                width: 6.8125rem;
+                height: 1rem;
+            }
+
+            .cartButton {
+                .cartIcon {
+                    width: 1.8125rem;
+                    height: 1.8125rem;
+                    flex-shrink: 0;
+                }
+            }
+        }
+
+        main {
+            width: 87.7%;
+            max-width: 21.375rem;
+
+            .principalContent {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 3.38rem;
+                gap: 2.38rem;
+
+                .principalImg {
+                    width: 100%;
+                    height: auto;
+                    flex-shrink: 0;
+                }
+
+                section {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 2.38rem;
+
+                    h2 {
+                        width: 100%;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .productContent {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-bottom: 2.25rem;
+                gap: 1.75rem;
+
+                .productFocusImg {
+                    width: 100%;
+                }
+
+                .infoProductContainer {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    gap: 0.5rem;
+
+                    .nameFocus {
+                        color: var(--color-black);
+                        font-family: var(--font-type-2);
+                        font-size: clamp(0.4rem, 2.5vw, 1.5rem);
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        margin-bottom: 0.38rem;
+                    }
+
+                    .priceFocus {
+                        color: var(--color-black);
+                        font-family: var(--font-type);
+                        font-size: clamp(0.6rem, 2.5vw, 2rem);
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .descriptionFocus {
+                        color: var(--color-black);
+                        font-family: var(--font-type-2);
+                        font-size: clamp(0.3rem, 2.5vw, 1.25rem);
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: clamp(0.6rem, 2.5vw, 2rem);
+                        margin-bottom: 1.81rem;
+                    }
+
+                    .cartAddButton {
+                        width: 100%;
+                        height: 2.75rem;
+                    }
+                }
+            }
+
+            .secondContent {
+                ul {
+                    overflow-x: auto;
+                    gap: 1.81rem;
+                }
+            }
+        }
+    }
+}

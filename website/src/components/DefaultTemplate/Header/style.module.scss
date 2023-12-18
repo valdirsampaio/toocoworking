@@ -1,0 +1,140 @@
+.header {
+    width: 100%;
+    height: 6.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+
+    .containerBox {
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .homeButton {
+            border: none;
+            background: none;
+            cursor: pointer;
+
+            .projectImage {
+                width: 6rem;
+                height: auto;
+            }
+        }
+
+        .buttonSection {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .buttonsContainer {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                .interactionButton {
+                    border: none;
+                    background: none;
+                    
+                    font-size: 0.875rem;
+                    color: var(--color-black);
+                    font-family: var(--font-type);
+                    font-style: normal;
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+
+                    &:focus {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+
+            .responsiveButton {
+                display: none;
+
+                .buttonsList {
+                    background: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    font-size: var(--font-3);
+                    font-family: var(--font-type-2);
+                    font-style: normal;
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    text-align: center;
+
+                    position: relative;
+                    display: inline-block;
+                    width: 3.75rem;
+                    height: 3.75rem;
+                    margin-left: 3.75rem/5;
+                    margin-right: 3.75rem/5;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    border: var(--color-darkGrey);
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: 100%;
+                        transition: all 0.25s ease;
+                        border-radius: 50%;
+                    }
+
+                    .listIcon {
+                        position: relative;
+                        color: var(--color-white);
+                        font-size: 2rem;
+                        margin-top: 0.2rem;
+                        transition: all 0.25s ease;
+                    }
+
+                    &::after {
+                        box-shadow: inset 0 0 0 1px var(--color-darkSlateGrey);
+                    }
+
+                    &::before {
+                        background: var(--color-darkSlateGrey);
+                        box-shadow: inset 0 0 0 60px var(--color-black);
+                    }
+
+                    &:hover::before {
+                        box-shadow: inset 0 0 0 1px var(--color-black);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+
+        .containerBox {
+            width: 91%;
+            min-width: 22.115rem;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.carouselItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+    .bannerImg {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mainFirstSectionInfo {
+        position: absolute;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: var(--color-white);
+        gap: 2rem;
+
+        .mainFirstSectionTitle {
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-size: clamp(2.5rem, 2.5vw, 3.5rem);
+            font-style: normal;
+            font-weight: var(--font-weight-3);
+            line-height: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.02rem;
+            text-shadow: -2px 2px 2px rgba(0,0,0,.5);
+        }
+
+        .mainFirstSectionParagraph {
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-size: clamp(0.7rem, 2.5vw, 1rem);
+            font-style: normal;
+            font-weight: var(--font-weight-4);
+            line-height: normal;
+            text-shadow: -1px 1px 1px rgba(0,0,0,.7);
+        }
+
+        .contactButton {
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-size: clamp(0.6rem, 2.5vw, 0.875rem);
+            font-style: normal;
+            font-weight: var(--font-weight-3);
+            line-height: normal;
+            text-transform: uppercase;
+
+            background-color: var(--color-black);
+            padding: 1.125rem 2rem;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+
+            box-shadow: -1px 1px 1px rgba(0,0,0,.5);
+
+            .contactButtonIcon {
+                width: auto;
+                height: 1rem;
+            }
+
+            &:hover {
+                background-color: var(--color-primary);
+            }
+        }
+    }
+}

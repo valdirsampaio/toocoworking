@@ -1,0 +1,109 @@
+.footer {
+    background-color: var(--color-black);
+    color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+    gap: 1rem;
+
+    .footerContainer {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-content: space-between;
+        gap: 2rem;
+        border-top: 0.1rem solid var(--color-white);
+        border-bottom: 0.1rem solid var(--color-white);
+        padding: 2rem 0rem;
+
+        .contactSection {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1.5rem;
+
+            .contactSectionTitle {
+                font-size: 2.125rem;
+                color: var(--color-white);
+                font-family: var(--font-type);
+                font-style: normal;
+                font-weight: var(--font-weight-3);
+                line-height: normal;
+                text-transform: uppercase;
+
+                span {
+                    border-bottom: 1px solid var(--color-primary);
+                    padding: 0 0 4px;
+                }
+            }
+
+            .contactSectionContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 1rem;
+
+                .contactSectionIcon {
+                    fill: var(--color-white);
+                    border: 1px solid var(--color-white);
+                    padding: 0.6rem;
+                    border-radius: 50%;
+                }
+
+                .contactSectionParagraph {
+                    font-size: 1rem;
+                    font-family: var(--font-type);
+                    font-style: normal;
+                    font-weight: var(--font-weight-4);
+                    line-height: normal;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+
+                    &:focus {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+        }
+
+        .locationSection {
+            width: auto;
+            height: auto;
+
+            iframe{
+                width: 400px;
+                height: 200px;
+            }
+        }
+    }
+
+    .footerCopyright {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 1rem;
+        color: var(--color-white);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        width: 100%;
+        div {
+            min-width: 24.375rem;
+        }
+    }
+}

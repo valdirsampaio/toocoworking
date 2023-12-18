@@ -1,0 +1,44 @@
+@import './reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray: #252525;
+  --color-brand-1: #CECECE;
+  --color-brand-2: #FDF7F9;
+  --color-primary: #ff8000;
+
+  --font-weight-1: 700;
+  --font-weight-2: 600;
+  --font-weight-3: 500;
+  --font-weight-4: 400;
+
+  --font-style: normal;
+
+  --font-type: "DM Sans", sans-serif;
+  --font-type-2: "Inter", sans-serif;
+  --font-type-3: "Montserrat", sans-serif;
+  --font-type-4: "Noto Sans JP", sans-serif;
+}
+
+#root {
+  font-style: var(--font-style);
+  background-color: var(--color-gray);
+  font-family: var(--font-type);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-white);
+}
+
+button {
+  cursor: pointer;
+}
