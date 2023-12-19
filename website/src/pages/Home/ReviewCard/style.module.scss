@@ -1,0 +1,73 @@
+.reviewItem {
+    width: 25%;
+    height: auto;
+    padding: 2.188rem 2.813rem 1.813rem 0rem;
+    border-top: 1px solid var(--color-black);
+    border-right: 1px solid var(--color-black);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    .reviewParagraph {
+        font-size: 1.25rem;
+        color: var(--color-black);
+        font-family: var(--font-type);
+        font-style: normal;
+        font-weight: var(--font-weight-4);
+        line-height: normal;
+    }
+
+    .reviewUser {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        .userAvatar {
+            width: 3.438rem;
+            height: auto;
+        }
+
+        .userInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.5rem;
+
+            .userName {
+                font-size: 1.375rem;
+                color: var(--color-black);
+                font-family: var(--font-type);
+                font-style: normal;
+                font-weight: var(--font-weight-3);
+                line-height: normal;
+                text-transform: uppercase;
+            }
+
+            .userRate {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                font-size: 1rem;
+                color: var(--color-black);
+                font-family: var(--font-type);
+                font-style: normal;
+                font-weight: var(--font-weight-4);
+                line-height: normal;
+
+                .rateIcon {
+                    width: 1rem;
+                    height: auto;
+                    color: var(--color-primary);
+                }
+            }
+        }
+    }
+}

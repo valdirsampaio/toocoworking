@@ -1,0 +1,36 @@
+.roomsItem {
+    height: auto;
+    width: 31%;
+    position: relative;
+    overflow: hidden;
+
+    .roomImg {
+        height: auto;
+        width: 100%;
+        -webkit-transition: -webkit-transform .5s ease;
+        transition: transform 1s ease;
+    }
+
+    .roomTitle {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: clamp(0.6rem, 2.5vw, 1rem);
+        color: var(--color-white);
+        font-family: var(--font-type);
+        font-style: normal;
+        font-weight: var(--font-weight-3);
+        line-height: normal;
+        text-transform: uppercase;
+        
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0.3rem 1.1rem;
+    }
+
+    &:hover {
+        .roomImg {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+}

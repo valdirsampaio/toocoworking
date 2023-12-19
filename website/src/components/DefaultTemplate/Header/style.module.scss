@@ -45,10 +45,11 @@
                     color: var(--color-black);
                     font-family: var(--font-type);
                     font-style: normal;
-                    font-weight: var(--font-weight-4);
+                    font-weight: var(--font-weight-2);
                     line-height: normal;
                     text-align: center;
                     text-transform: uppercase;
+                    cursor: pointer;
 
                     &:hover {
                         color: var(--color-primary);

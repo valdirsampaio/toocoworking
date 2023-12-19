@@ -1,0 +1,43 @@
+.serviceItem {
+    width: 20rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    border-left: 1px solid black;
+    background: transparent;
+    padding: 0rem 1rem;
+
+    background: linear-gradient(to left, transparent 50%, var(--color-black) 50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+
+    .serviceIcon {
+        width: 4rem;
+        height: auto;
+    }
+
+    .serviceTitle {
+        font-size: 1.125rem;
+        color: var(--color-black);
+        font-family: var(--font-type);
+        font-style: normal;
+        font-weight: var(--font-weight-3);
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        background-position: left;
+
+        .serviceIcon {
+            color: #e8e1d9;
+        }
+
+        .serviceTitle {
+            color: #e8e1d9;
+        }
+    }
+}
