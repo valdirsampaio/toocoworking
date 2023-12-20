@@ -9,23 +9,24 @@ import { RoomsCard } from "./RoomsCard";
 import { CommodityCard } from "./CommodityCard";
 import { ReviewCard } from "./ReviewCard";
 import { FiArrowDownRight } from "react-icons/fi";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
+import { RoomsContext } from "../../providers/RoomsContext";
+import { SeeRoomModal } from "./SeeRoomModal";
 
 export const Home = ({ }) => {
 
-    const { scrollYProgress } = useViewportScroll();
-    const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+    const { seeRoomModal } = useContext(RoomsContext);
 
     return (
         <DefaultTemplate>
             <main className={styles.mainArea}>
                 <motion.div className={styles.mainContainer}>
                     <section className={styles.mainFirstSection}>
-                        <motion.ul 
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5, duration: 0.5 }}className={styles.sectionList}>
-                            <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation autoplay={{ delay: 5000 }} style={{
+                        <motion.ul
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.5, duration: 0.5 }} className={styles.sectionList}>
+                            <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation autoplay={{ delay: 5000 }} className={styles.sectionSwiper} style={{
                                 "--swiper-pagination-color": "#ff8000",
                                 "--swiper-pagination-bullet-inactive-color": "#999999",
                                 "--swiper-pagination-bullet-inactive-opacity": "1",
@@ -33,11 +34,10 @@ export const Home = ({ }) => {
                                 "--swiper-pagination-bullet-horizontal-gap": "6px",
                                 "--swiper-navigation-color": "#000000",
                                 "--swiper-pagination-bullet-border-radius": "0px",
-
                             }}>
                                 {
                                     carouselList.map((item) => (
-                                        <SwiperSlide key={item.id}>
+                                        <SwiperSlide className={styles.swiperSlide} key={item.id}>
                                             <CarouselCard item={item} />
                                         </SwiperSlide>
                                     ))
@@ -48,9 +48,9 @@ export const Home = ({ }) => {
                     <section
                         id="services" className={styles.mainSecondSection}>
                         <motion.div
-                        initial={{ y: 250, opacity: 0, size: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 1, type: "spring" }}  className={styles.secondSectionContainer}>
+                            initial={{ y: 250, opacity: 0, size: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 1, type: "spring" }} className={styles.secondSectionContainer}>
                             <h1 className={styles.secondSectionTitle}>
                                 <span>Nossos servi</span>ços
                             </h1>
@@ -64,11 +64,11 @@ export const Home = ({ }) => {
                         </motion.div>
                     </section>
                     <section id="rooms" className={styles.mainThirdSection}>
-                        <motion.div 
-                        initial={{ y: 250, opacity: 0, size: 0 }}
-                        animate={{ y: -10, opacity: 1 }}
-                        transition={{ delay: 3, type: "spring" }} 
-                        className={styles.thirdSectionContainer}>
+                        <motion.div
+                            initial={{ y: 250, opacity: 0, size: 0 }}
+                            animate={{ y: -10, opacity: 1 }}
+                            transition={{ delay: 3, type: "spring" }}
+                            className={styles.thirdSectionContainer}>
                             <h1 className={styles.thirdSectionTitle}>
                                 <span>Nossos espaços priva</span>tivos
                             </h1>
@@ -83,9 +83,9 @@ export const Home = ({ }) => {
                     </section>
                     <section id="commodity" className={styles.mainFourthSection}>
                         <motion.div
-                        initial={{ y: 250, opacity: 0, size: 0 }}
-                        animate={{ y: -10, opacity: 1 }}
-                        transition={{ delay: 3, type: "spring" }} className={styles.fourthSectionContainer}>
+                            initial={{ y: 250, opacity: 0, size: 0 }}
+                            animate={{ y: -10, opacity: 1 }}
+                            transition={{ delay: 3, type: "spring" }} className={styles.fourthSectionContainer}>
                             <h1 className={styles.fourthSectionTitle}>
                                 <span>Comodida</span>des
                             </h1>
@@ -100,8 +100,8 @@ export const Home = ({ }) => {
                     </section>
                     <section className={styles.mainFifthSection}>
                         <motion.div initial={{ y: 250, opacity: 0, size: 0 }}
-                        animate={{ y: -10, opacity: 1 }}
-                        transition={{ delay: 3, type: "spring" }} className={styles.fifthSectionContainer}>
+                            animate={{ y: -10, opacity: 1 }}
+                            transition={{ delay: 3, type: "spring" }} className={styles.fifthSectionContainer}>
                             <h1 className={styles.fifthSectionTitle}>
                                 <span>Avaliações de clien</span>tes
                             </h1>
@@ -120,6 +120,7 @@ export const Home = ({ }) => {
                     </section>
                 </motion.div>
             </main>
+            {seeRoomModal ? <SeeRoomModal /> : null}
         </DefaultTemplate>
     );
 };

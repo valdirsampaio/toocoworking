@@ -106,7 +106,7 @@ export const servicesList = [
 export const roomsList = [
     {
         "id": 0,
-        "title": "Reuniões",
+        "title": "Sala para reuniões",
         "images": [ reunioes1, reunioes2, reunioes3 ]
     },
     {

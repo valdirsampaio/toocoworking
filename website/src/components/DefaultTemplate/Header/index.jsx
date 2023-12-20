@@ -40,7 +40,7 @@ export const Header = () => {
                         </a>
                     </div>
                     <div className={styles.responsiveButton}>
-                        <button className={styles.buttonsList} ><MdMenu className={styles.listIcon} /> </button>
+                        <button className={styles.buttonsList} ><MdMenu className={styles.listIcon} /></button>
                     </div>
                 </section>
             </div>

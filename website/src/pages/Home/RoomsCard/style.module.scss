@@ -4,33 +4,52 @@
     position: relative;
     overflow: hidden;
 
-    .roomImg {
-        height: auto;
-        width: 100%;
-        -webkit-transition: -webkit-transform .5s ease;
-        transition: transform 1s ease;
-    }
-
-    .roomTitle {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-        font-size: clamp(0.6rem, 2.5vw, 1rem);
-        color: var(--color-white);
-        font-family: var(--font-type);
-        font-style: normal;
-        font-weight: var(--font-weight-3);
-        line-height: normal;
-        text-transform: uppercase;
-        
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 0.3rem 1.1rem;
-    }
-
-    &:hover {
+    button {
+        border: none;
+        background: none;
         .roomImg {
-            -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+            height: auto;
+            width: 100%;
+            -webkit-transition: -webkit-transform .5s ease;
+            transition: transform 1s ease;
+        }
+
+        .roomTitle {
+            position: absolute;
+            bottom: clamp(7px, 2.5vw, 10px);
+            left: clamp(7px, 2.5vw, 10px);
+            font-size: clamp(0.5rem, 2.5vw, 1rem);
+            color: var(--color-white);
+            font-family: var(--font-type);
+            font-style: normal;
+            font-weight: var(--font-weight-3);
+            line-height: normal;
+            text-transform: uppercase;
+
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 0.3rem 1.1rem;
+        }
+
+        &:hover {
+            .roomImg {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .roomsItem {
+        button {
+            .roomTitle {
+                bottom: 7px;
+                left: 7px;
+                font-size: 0.5rem;
+                padding: 0.2rem 1rem;
+            }
         }
     }
 }

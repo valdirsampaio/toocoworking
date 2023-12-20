@@ -8,7 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0rem;
+    padding: clamp(1rem, 2.5vw, 2rem) 0rem;
     gap: 1rem;
 
     .footerContainer {
@@ -20,7 +20,7 @@
         gap: 2rem;
         border-top: 0.1rem solid var(--color-white);
         border-bottom: 0.1rem solid var(--color-white);
-        padding: 2rem 0rem;
+        padding: clamp(1rem, 2.5vw, 2rem) 0rem;
 
         .contactSection {
             display: flex;
@@ -30,7 +30,7 @@
             gap: 1rem;
 
             .contactSectionTitle {
-                font-size: 2.125rem;
+                font-size: clamp(1.5rem, 2.5vw, 2.125rem);
                 color: var(--color-white);
                 font-family: var(--font-type);
                 font-style: normal;
@@ -49,17 +49,19 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
-                gap: 1rem;
+                gap: clamp(0.5rem, 2.5vw, 1rem);
 
                 .contactSectionIcon {
                     fill: var(--color-white);
                     border: 1px solid var(--color-white);
                     padding: 0.6rem;
                     border-radius: 50%;
+                    width: clamp(0.7rem, 2.5vw, 1rem);
+                    height: auto;
                 }
 
                 .contactSectionParagraph {
-                    font-size: 1rem;
+                    font-size: clamp(0.7rem, 2.5vw, 1rem);
                     font-family: var(--font-type);
                     font-style: normal;
                     font-weight: var(--font-weight-4);
@@ -83,8 +85,8 @@
             height: auto;
 
             iframe{
-                width: 400px;
-                height: 250px;
+                width: clamp(20rem, 2.5vw, 30rem);
+                height: clamp(12.5rem, 2.5vw, 18.5rem);
             }
         }
     }
@@ -95,16 +97,73 @@
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 1rem;
+        padding: 1rem 0rem;
         color: var(--color-white);
+
+        font-size: clamp(0.7rem, 2.5vw, 1rem);
+        font-family: var(--font-type);
+        font-style: normal;
+        font-weight: var(--font-weight-4);
+        line-height: normal;
     }
 }
 
 @media (max-width: 768px) {
     .footer {
         width: 100%;
-        div {
-            min-width: 24.375rem;
+        min-width: 24.375rem;
+        padding: 1rem 0rem;
+    
+        .footerContainer {
+            width: 90%;
+            min-width: 21.5rem;
+            flex-direction: column;
+            align-content: flex-start;
+            justify-content: flex-start;
+            padding: 1rem 0rem;
+    
+            .contactSection {
+                gap: 1rem;
+    
+                .contactSectionTitle {
+                    font-size: 1.5rem;
+                }
+    
+                .contactSectionContainer {
+                    gap: 0.5rem;
+    
+                    .contactSectionIcon {
+                        padding: 0.5rem;
+                        width: 0.7rem;
+                        height: auto;
+                    }
+    
+                    .contactSectionParagraph {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+    
+            .locationSection {
+                width: auto;
+                height: auto;
+    
+                iframe{
+                    width: 18.75rem;
+                    height: 12.5rem;
+                }
+            }
+        }
+    
+        .footerCopyright {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1rem 0rem;
+            color: var(--color-white);
+            font-size: 0.7rem;
         }
     }
 }

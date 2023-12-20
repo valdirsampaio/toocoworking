@@ -15,12 +15,12 @@
     transition: .5s ease-out;
 
     .serviceIcon {
-        width: 4rem;
+        width: clamp(2.5rem, 2.5vw, 4rem);
         height: auto;
     }
 
     .serviceTitle {
-        font-size: 1.125rem;
+        font-size: clamp(0.6rem, 2.5vw, 1.125rem);
         color: var(--color-black);
         font-family: var(--font-type);
         font-style: normal;
@@ -38,6 +38,34 @@
 
         .serviceTitle {
             color: #e8e1d9;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceItem {
+        width: 10rem;
+        height: 4rem;
+    
+        .serviceIcon {
+            width: 2.5rem;
+            height: auto;
+        }
+    
+        .serviceTitle {
+            font-size: 0.6rem;
+        }
+    
+        &:hover {
+            background-position: left;
+    
+            .serviceIcon {
+                color: #e8e1d9;
+            }
+    
+            .serviceTitle {
+                color: #e8e1d9;
+            }
         }
     }
 }
